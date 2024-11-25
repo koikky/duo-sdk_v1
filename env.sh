@@ -87,8 +87,8 @@ fi
 BOARD_MODEL="${PARAM1}"
 RT_TYPE="${RT_EXTEND}"
 
-CURRENT_DIR=$(pwd)
-export ROOT_DIR="$CURRENT_DIR"
+CURRENT_DIR=$(readlink -f "$0")
+export ROOT_DIR="${CURRENT_DIR}/.."
 
 TMP_DIR="$ROOT_DIR/duo-sdk/build"
 
