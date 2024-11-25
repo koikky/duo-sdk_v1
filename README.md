@@ -3,7 +3,7 @@ A simple sdk for duo to build RT-Thread
 
 ## 准备工作
 ### 拉取duo-sdk
-使用 git clone git@github.com:koikky/duo-sdk.git 可以拉取duo-sdk到本地目录
+使用 ```shell git clone git@github.com:koikky/duo-sdk.git ``` 可以拉取duo-sdk到本地目录
 
 ### 拉取rt-thread
 使用 git clone git@github.com:RT-Thread/rt-thread.gitt可以拉取RT-Thread源码到本地目录
