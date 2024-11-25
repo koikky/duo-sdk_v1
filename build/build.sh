@@ -110,6 +110,14 @@ if [[ "$TC_RT_TYPE" == "std" ]]; then
 	TOOLCHAIN_NAME="Xuantie-900-gcc-elf-newlib-x86_64-V2.8.1"
 fi
 
+if [ ! -d $DUO_CMP_DIR ]; then
+    mkdir -p $DUO_CMP_DIR
+	if [ $? -ne 0 ]; then
+    	echo "Error: Failed to create directory '$DUO_CMP_DIR'."
+    	return 1
+	fi
+fi
+
 DUO_TOOLCHAIN="$DUO_CMP_DIR/$TOOLCHAIN_TAR_NAME"
 DUO_TOOLCHAIN_DIR="$DUO_CMP_DIR/$TOOLCHAIN_NAME"
 
