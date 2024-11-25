@@ -38,6 +38,8 @@ function do_combine()
 	MONITOR_PATH=${OPENSBI_BUILD_PATH}/fw_dynamic.bin
 	LOADER_2ND_PATH=${UBOOT_BUILD_PATH}/u-boot-raw.bin
 
+	chmod +x "$FSBL_BUILD_PLAT/fiptool.py"
+ 	
 	echo "Combining fip.bin..."
 	. ${FSBL_BUILD_PLAT}/blmacros.env && \
 	${FSBL_BUILD_PLAT}/fiptool.py -v genfip \
