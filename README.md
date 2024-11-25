@@ -30,5 +30,5 @@ A simple sdk for duo to build RT-Thread
 ### 打包（可选）
 ``` $ pack_image ``` 可以打包为一个img文件
 
-##注意
+## 注意
 输出目录在output/下
