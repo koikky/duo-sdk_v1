@@ -87,7 +87,7 @@ fi
 BOARD_MODEL="${PARAM1}"
 RT_TYPE="${RT_EXTEND}"
 
-CURRENT_DIR=$(dirname $(readlink -f "$0")）
+CURRENT_DIR=$(dirname $(readlink -f "$0"))
 export ROOT_DIR="${CURRENT_DIR}/.."
 
 TMP_DIR="$CURRENT_DIR/build"
