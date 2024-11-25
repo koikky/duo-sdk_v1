@@ -87,10 +87,10 @@ fi
 BOARD_MODEL="${PARAM1}"
 RT_TYPE="${RT_EXTEND}"
 
-CURRENT_DIR=$(readlink -f "$0")
+CURRENT_DIR=$(dirname $(readlink -f "$0")）
 export ROOT_DIR="${CURRENT_DIR}/.."
 
-TMP_DIR="$ROOT_DIR/duo-sdk/build"
+TMP_DIR="$CURRENT_DIR/build"
 
 source "$TMP_DIR/device/${BOARD_MODEL}_sd/boardconfig.sh"
 source "$TMP_DIR/build.sh" $RT_TYPE
