@@ -1,0 +1,15 @@
+# for module compiling
+import os
+from building import *
+
+if os.getenv('BIG_CORE_DIR'):
+	cwd = os.getenv('BIG_CORE_DIR')
+objs = []
+list = os.listdir(cwd)
+
+for d in list:
+    path = os.path.join(cwd, d)
+    if os.path.isfile(os.path.join(path, 'SConscript')):
+        objs = objs + SConscript(os.path.join(path, 'SConscript'), variant_dir=d, duplicate=0)
+
+Return('objs')
