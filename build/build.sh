@@ -105,6 +105,9 @@ export DUO_CMP_DIR="$DUO_SDK_DIR/toolchains/rt-$TC_RT_TYPE"
 
 export BUILD_TOOLS="$DUO_SDK_DIR/tools"
 
+chmod +x "$BUILD_TOOLS/mkimage"
+chmod +x "$BUILD_TOOLS/genimage"
+
 if [[ "$TC_RT_TYPE" == "std" ]]; then
 	TOOLCHAIN_TAR_NAME="Xuantie-900-gcc-elf-newlib-x86_64-V2.8.1-20240115.tar.gz"
 	TOOLCHAIN_NAME="Xuantie-900-gcc-elf-newlib-x86_64-V2.8.1"
